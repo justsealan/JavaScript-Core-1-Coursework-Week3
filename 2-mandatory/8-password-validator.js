@@ -25,7 +25,6 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 function validatePasswords(passwords) {
   var result = [];
-  let duplicates = [];
     for (var i = 0; i < passwords.length; i++) {
       
       var password = passwords[i];
