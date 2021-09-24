@@ -23,7 +23,32 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {}
+function validatePasswords(passwords) {
+  var result = [];
+  let duplicates = [];
+    for (var i = 0; i < passwords.length; i++) {
+      
+      var password = passwords[i];
+      if (
+        password.length >= 5 &&
+        containsUppercaseLetter(password) &&
+        containsLowercaseLetter(password) &&
+        containsNumber(password) &&
+        containsSymbol(password) &&
+        passwords.indexOf(password) == i
+      ) {
+        result.push(true);
+      } else {
+        result.push(false);
+      }
+    }
+    return result;
+  }
+
+// Returns true if string contains at least one previous password.
+function containsPreviousPassword(arr) {
+
+}
 
 // Returns true if string contains at least one uppercase letter.
 function containsUppercaseLetter(string) {
