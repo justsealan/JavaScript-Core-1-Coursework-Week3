@@ -25,8 +25,7 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 function validatePasswords(passwords) {
   var result = [];
-    for (var i = 0; i < passwords.length; i++) {
-      
+    for (var i = 0; i < passwords.length; i++) { 
       var password = passwords[i];
       if (
         password.length >= 5 &&
@@ -43,12 +42,6 @@ function validatePasswords(passwords) {
     }
     return result;
   }
-
-// Returns true if string contains at least one previous password.
-function containsPreviousPassword(arr) {
-
-}
-
 // Returns true if string contains at least one uppercase letter.
 function containsUppercaseLetter(string) {
   return /[A-Z]/.test(string);
